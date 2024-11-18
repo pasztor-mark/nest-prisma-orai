@@ -20,11 +20,11 @@ model Song {
   price   Int
   rating  Float
   artist  String
-  playlists Playlist[]
+  playlists Playlist[] @relation("_playlisttosong")
 }
 
 model Playlist {
   id      Int @id @default(autoincrement())
   name    String
-  songs   Song[]
+  songs   Song[] @relation("_playlisttosong")
 }

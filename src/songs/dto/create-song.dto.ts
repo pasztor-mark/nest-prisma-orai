@@ -1,4 +1,5 @@
-import { Max, IsString, Min, IsNumber, Length } from "class-validator"
+import { Playlist } from "@prisma/client"
+import { Max, IsString, Min, IsNumber, Length, IsArray, IsOptional } from "class-validator"
 
 export class CreateSongDto {
   @IsString()
@@ -20,4 +21,5 @@ export class CreateSongDto {
   @IsString()
   @Length(1, 30)
   artist: string
+
 }
